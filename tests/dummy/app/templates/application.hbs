@@ -1,14 +1,12 @@
 {{#indie-app}}
   {{#indie-navbar title="Indie UI"}}
-    {{app-navigation}}
+    {{indie-navitem text="Layout" route="layout"}}
+    {{indie-navitem text="Forms" route="forms"}}
+    {{indie-navitem text="Lists" route="list"}}
+    {{indie-navitem text="Typography" route="typography"}}
   {{/indie-navbar}}
 
   {{#indie-content}}
-
-    {{#indie-section-heading title="Section Heading Test"}}
-      {{indie-tab text="Tab 1" icon="face" route="index"}}
-      {{indie-tab text="Tab 2" icon="chat" route="forms"}}
-    {{/indie-section-heading}}
-
+    {{outlet}}
   {{/indie-content}}
 {{/indie-app}}

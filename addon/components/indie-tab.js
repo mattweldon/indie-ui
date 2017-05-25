@@ -17,7 +17,6 @@ export default Component.extend({
   // Computed
   isActive: Ember.computed('router.currentRouteName', function() {
     let currentPath = this.get('router.currentRouteName');
-    console.log(currentPath);
     return currentPath == this.get('route');
   })
 });

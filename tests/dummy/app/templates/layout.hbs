@@ -1,0 +1,29 @@
+{{#indie-section-heading title="Layout"}}
+{{/indie-section-heading}}
+
+{{indie-subsection-heading title="App Layout" description="The App Layout component gives your application a NavBar and Content area."}}
+
+<div style="width: 100%; padding: 2em; border: 1px solid #ccc; margin-bottom: 5em;">
+  {{#indie-app}}
+    {{#indie-navbar title="Layout"}}
+      {{indie-navitem text="Nav Item 1" route="layout"}}
+      {{indie-navitem text="Nav Item 2" route="forms"}}
+      {{indie-navitem text="Nav Item 3" route="list"}}
+    {{/indie-navbar}}
+
+    {{#indie-content}}
+      Some content goes here.
+    {{/indie-content}}
+  {{/indie-app}}
+</div>
+
+{{indie-subsection-heading title="Section Heading" description="The Section Heading component should be used once per page, providing a top-level Title and a series of Tabs."}}
+
+<div style="width: 100%; padding: 2em; border: 1px solid #ccc; margin-bottom: 5em;">
+
+      {{#indie-section-heading title="Subsection"}}
+        {{indie-tab text="Tab 1" icon="face" route="layout"}}
+        {{indie-tab text="Tab 2" icon="chat" route="forms"}}
+      {{/indie-section-heading}}
+
+</div>

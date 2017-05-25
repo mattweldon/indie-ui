@@ -7,7 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('layout');
   this.route('forms');
+  this.route('list');
+  this.route('typography');
 });
 
 export default Router;
