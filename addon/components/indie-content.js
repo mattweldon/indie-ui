@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import layout from '../templates/components/indie-app';
+import layout from '../templates/components/indie-content';
 
 const {
   Component,
