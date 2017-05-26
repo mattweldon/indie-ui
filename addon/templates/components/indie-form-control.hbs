@@ -1,0 +1,73 @@
+{{#if hasLabel}}
+  <label class="{{labelClasses}}" for="{{name}}">{{label}}</label>
+{{/if}}
+
+{{#if isTextarea}}
+  {{textarea
+    class=inputClasses
+    name=name
+    value=value
+    type=type
+    rows=rows
+    cols=cols
+    disabled=disabled}}
+{{else if isSwitch}}
+  {{mdl-switch text=label value=value disabled=disabled}}
+{{else if isCheckbox}}
+  {{mdl-checkbox text=label value=value disabled=disabled}}
+{{else if isIcon}}
+  {{mdl-icon-toggle icon=icon value=value disabled=disabled}}
+{{else if isRadio}}
+  {{#each computedOptions as |option|}}
+    {{mdl-radio
+      name=name
+      text=option.label
+      value=option.value
+      disabled=disabled
+      on-change=(action 'checkOption')
+      checked=option.selected}}
+  {{/each}}
+{{else if isSelect}}
+  {{tiny-select
+    options=computedOptions
+    selection=selectedValue
+    optionLabelPath="label"
+    optionValuePath="value"
+    prompt=prompt
+    class=inputClasses
+  }}
+{{else if isDate}}
+  {{pikaday-input
+    class=inputClasses
+    name=name
+    value=value
+    disabled=disabled
+    format=format
+    placeholder=placeholder
+    useUTC=useUTC
+    onSelection=(action 'selectedDate')}}
+{{else}}
+  {{input
+    class=inputClasses
+    name=name
+    value=value
+    type=type
+    max=max
+    min=min
+    step=step
+    disabled=disabled}}
+{{/if}}
+
+{{#if showErrorMessage}}
+  <div class="smd-form__error">{{v-get model name 'message'}}</div>
+{{/if}}
+
+{{#if showWarningMessage}}
+  <div class="smd-form__warning">{{v-get model name 'warningMessage'}}</div>
+{{/if}}
+
+{{#if showTip}}
+  <div class="f7 fw3 mt2 moon-gray">{{tip}}</div>
+{{/if}}
+
+{{yield}}

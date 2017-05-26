@@ -8,7 +8,11 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('layout');
-  this.route('forms');
+  this.route('forms', function() {
+    this.route('inputs');
+    this.route('select');
+  });
+
   this.route('list');
   this.route('typography');
 });

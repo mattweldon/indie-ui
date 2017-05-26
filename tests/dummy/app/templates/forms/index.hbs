@@ -1,0 +1,12 @@
+{{indie-subsection-heading title="The Form" description="Wrap your controls in this parent component."}}
+
+<h3 class="doc-heading">Code</h3>
+{{code-snippet name="form.hbs"}}
+
+<h3 class="doc-heading">Example</h3>
+
+<div class="component-example">
+{{#indie-form action='submitForm' model=model}}
+  {{indie-form-control isFloating=false name='control1' model=model value=model.control1 label='Control 1'}}
+{{/indie-form}}
+</div>

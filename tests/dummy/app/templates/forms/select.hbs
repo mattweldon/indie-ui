@@ -1,0 +1,18 @@
+{{indie-subsection-heading title="Select List" description="A standard HTML dropdown list."}}
+
+<h4 class="doc-heading">Code</h4>
+{{code-snippet name="select.hbs"}}
+
+
+<h4 class="doc-heading">Example</h4>
+<div class="component-example">
+{{indie-form-control
+      type='select'
+      name='color'
+      model=model.user
+      value=model.user.color
+      label='Fav Color'
+      nullOption='-- Select Color --'
+      options=model.colorOptions
+      tip='Please select your fav color'}}
+</div>

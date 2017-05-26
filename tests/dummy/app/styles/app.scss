@@ -1,1 +1,13 @@
 @import 'indie-ui.scss';
+
+.doc-heading {
+  @extend .f6;
+  @extend .silver;
+  @extend .fw3;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.component-example {
+  width: 100%; padding: 2em; border: 1px solid #ccc; margin-bottom: 5em;
+}
