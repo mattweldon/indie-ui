@@ -17,6 +17,7 @@ Router.map(function() {
     this.route('inputs');
     this.route('buttons');
     this.route('selects');
+    this.route('validations');
   });
 
   this.route('lists');
