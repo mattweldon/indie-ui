@@ -186,19 +186,29 @@ export default Component.extend({
       }
     }
   }),
-  inputClasses: computed('type', function() {
+  inputClasses: computed('type', 'showErrorMessage', function() {
     var classNames = [
-      'ba', 'bw1', 'pa3', 'w-100', 'f5', 'br1', 'b--light-gray', 'plc--moon-gray'
+      'ba', 'bw1', 'pa3', 'w-100', 'f5', 'br1'
     ];
+    if (this.get('showErrorMessage')) {
+      classNames.push('b--red');
+    } else {
+      classNames.push('b--light-gray');
+      classNames.push('plc--moon-gray');
+    }
     return classNames.join(' ');
   }),
-  labelClasses: computed('type', function() {
+  labelClasses: computed('type', 'showErrorMessage', function() {
     var classNames = [
       'db',
       'f6',
-      'mb2',
-      'silver'
+      'mb2'
     ];
+    if (this.get('showErrorMessage')) {
+      classNames.push('red');
+    } else {
+      classNames.push('silver');
+    }
     return classNames.join(' ');
   }),
   // Methods

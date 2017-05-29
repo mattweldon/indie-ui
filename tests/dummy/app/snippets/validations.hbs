@@ -1,3 +1,5 @@
+## Model
+
 import DS from 'ember-data';
 import {
  validator,
@@ -17,6 +19,13 @@ const Validations = buildValidations({
 });
 
 export default Model.extend(Validations, {
-  name: attr('string'),
-  users: hasMany('user'),
+  name: attr('string')
 });
+
+
+
+## Handlebars
+
+{{#indie-form}}
+  {{indie-form-control name='name' model=model value=model.name label='Animal Name'}}
+{{/indie-form}}

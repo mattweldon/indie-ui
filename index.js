@@ -2,5 +2,8 @@
 'use strict';
 
 module.exports = {
-  name: 'indie-ui'
+  name: 'indie-ui',
+  setupPreprocessorRegistry(type, registry) {
+    this.eachAddonInvoke('setupPreprocessorRegistry', [type, registry]);
+  },
 };

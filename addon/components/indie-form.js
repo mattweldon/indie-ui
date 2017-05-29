@@ -13,19 +13,22 @@ export default Ember.Component.extend({
   childFormControls: Ember.computed('childViews', function() {
 
     var findChildFormControls = function(thisComponent) {
-
+      console.log('findChildFormControls');
       let childViews = thisComponent.get('childViews');
+      console.log(thisComponent);
+      console.log(childViews);
       var childFormControls = childViews.filter((childView) => {
         return childView.constructor.toString().indexOf('indie-form-control') !== -1;
       });
-
       childViews.forEach(function(childView) {
-        childFormControls.addObjects(findChildFormControls(childView));
+        if (childFormControls.addObjects) {
+          childFormControls.addObjects(findChildFormControls(childView));
+        }
       });
 
       return childFormControls;
     };
-
+    console.log('-->');
     return findChildFormControls(this);
   }),
   validate: function() {
@@ -36,7 +39,9 @@ export default Ember.Component.extend({
     formControls.forEach(
       function(formControl) {
         if (formControl.get('validation') && !formControl.get('validation.isValid')) {
-          errorMessages.addObjects(formControl.get('validation.errors').mapBy('message'));
+          if (errorMessages.addObjects) {
+            errorMessages.addObjects(formControl.get('validation.errors').mapBy('message'));
+          }
         }
         formControl.set('didValidate', true);
       }
@@ -59,6 +64,14 @@ export default Ember.Component.extend({
 
     if (this.validate()) {
       this.sendAction('action', this.get('model'));
+    }
+  },
+  init() {
+    this._super(...arguments);
+    var propName = this.get('name');
+    if (this.get("model")) {
+      Ember.defineProperty(this, 'validation', Ember.computed.oneWay(`model.validations.attrs.${propName}`));
+      Ember.defineProperty(this, 'value', Ember.computed.alias(`model.${propName}`));
     }
   },
   didInsertElement() {
