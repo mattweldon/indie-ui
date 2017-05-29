@@ -1,0 +1,1 @@
+export { default } from 'indie-ui/components/indie-table-footer-cell';

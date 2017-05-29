@@ -15,6 +15,7 @@ Router.map(function() {
   });
 
   this.route('list');
+  this.route('tables');
   this.route('typography');
 });
 
