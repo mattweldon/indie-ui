@@ -1,4 +1,12 @@
 {{#indie-section-heading title="List"}}
 {{/indie-section-heading}}
 
-{{outlet}}
+{{indie-subsection-heading title="Item List" description="A simple list of items"}}
+
+<div class="component-example">
+  {{#indie-list}}
+    {{#each model as |item|}}
+      {{indie-item title=item.name meta=item.longName item=item action="primaryItemAction"}}
+    {{/each}}
+  {{/indie-list}}
+</div>
