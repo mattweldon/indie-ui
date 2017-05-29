@@ -9,6 +9,6 @@ export default Component.extend({
   // Attributes
   layout,
   classNames: [
-    'w-100', 'ma0', 'bg-white', 'sans-serif'
+    'w-100', 'ma0', 'bg-white', 'sans-serif', 'fw3'
   ]
 });

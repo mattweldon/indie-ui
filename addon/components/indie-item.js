@@ -2,6 +2,8 @@ import Ember from 'ember';
 import layout from '../templates/components/indie-item';
 
 export default Ember.Component.extend({
+  // Services
+  router: Ember.inject.service('-routing'),
   // Component setup
   layout,
   tagName: 'li',
@@ -9,7 +11,6 @@ export default Ember.Component.extend({
     'indie-item',
     'bb', 
     'b--light-gray', 
-    'ph2',
     'pv3', 
     'db', 
     'dt-ns', 
@@ -137,8 +138,10 @@ export default Ember.Component.extend({
   // Events
   click: function() {
     if (this.get('action')) {
-      console.log(this.get('item'));
       this.sendAction('action', this.get('item'));
+    }
+    if (this.get('route')) {
+      this.get('router').transitionTo(this.get('route'), this.get('item'));
     }
   },
   actions: {

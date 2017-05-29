@@ -10,9 +10,16 @@ export default Component.extend({
   layout,
   tagName: 'div',
   classNames: [
-    'db',
-    'mb4'
+    'db'
   ],
   title: '',
-  description: ''
+  description: '',
+  // Methods
+  didReceiveAttrs() {
+    if (this.get('description')) {
+      this.get('classNames').push('mb4');
+    } else {
+      this.get('classNames').push('mb2');
+    }
+  }
 });

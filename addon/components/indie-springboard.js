@@ -12,6 +12,7 @@ export default Component.extend({
     'w-100', 
     'ma0', 
     'bg-blue', 
-    'sans-serif'
+    'sans-serif',
+    'fw3'
   ]
 });
