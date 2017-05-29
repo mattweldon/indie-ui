@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('layout');
   this.route('forms', function() {
     this.route('inputs');
+    this.route('buttons');
     this.route('select');
   });
 
