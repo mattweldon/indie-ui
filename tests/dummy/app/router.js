@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('layout', function() {
+  this.route('layouts', function() {
     this.route('external');
     this.route('internal');
     this.route('content');
@@ -16,10 +16,10 @@ Router.map(function() {
   this.route('forms', function() {
     this.route('inputs');
     this.route('buttons');
-    this.route('select');
+    this.route('selects');
   });
 
-  this.route('list');
+  this.route('lists');
   this.route('tables');
   this.route('typography');
 });
