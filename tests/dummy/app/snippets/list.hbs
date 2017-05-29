@@ -1,0 +1,5 @@
+  {{#indie-list}}
+    {{#each model as |item|}}
+      {{indie-item title=item.name meta=item.longName item=item action="primaryItemAction"}}
+    {{/each}}
+  {{/indie-list}}

@@ -3,10 +3,15 @@
 
 {{indie-subsection-heading title="Item List" description="A simple list of items"}}
 
+<h4 class="doc-heading">Code</h4>
+{{code-snippet name="list.hbs"}}
+
+
+<h4 class="doc-heading">Example</h4>
 <div class="component-example">
-  {{#indie-list}}
-    {{#each model as |item|}}
-      {{indie-item title=item.name meta=item.longName item=item action="primaryItemAction"}}
-    {{/each}}
-  {{/indie-list}}
+{{#indie-list}}
+  {{#each model as |item|}}
+    {{indie-item title=item.name meta=item.longName item=item action="primaryItemAction"}}
+  {{/each}}
+{{/indie-list}}
 </div>
