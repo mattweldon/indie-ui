@@ -1,0 +1,20 @@
+{{indie-subsection-heading title="External (Springboard) Layout" description="The springboard component is perfect for external / auth pages."}}
+
+<h3 class="doc-heading">Code</h3>
+{{code-snippet name="springboard.hbs"}}
+
+<h3 class="doc-heading">Example</h3>
+
+<div class="component-example">
+  {{#indie-springboard brand="Indie UI" title="Log In"}}
+    {{#indie-form action='submitForm' model=model}}
+      {{indie-form-control type="email" label='Email Address'}}
+      {{indie-form-control type="password" label='Password'}}
+
+      {{#indie-form-footer}}
+        {{indie-button text="Log In" style="positive block"}}
+      {{/indie-form-footer}}
+    {{/indie-form}}
+  {{/indie-springboard}}
+</div>
+

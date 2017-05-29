@@ -44,12 +44,25 @@ export default Component.extend({
     'underline',
     'bg-white'
   ],
+  blockClassNames: [
+    'db',
+    'w-100',
+    'mh0'
+  ],
   // Methods
   didReceiveAttrs() {
     var styleName = this.get('style');
-    var styleClasses = this.get(styleName + 'ClassNames');
-    var defaultClasses = this.get('classNames');
-    this.set('classNames', defaultClasses.concat(styleClasses));
+    if (styleName) {
+      var styleNames = styleName.split(' ');
+      console.log(styleNames);
+      for (var i = 0; i < styleNames.length; i++) {
+        let styleClasses = this.get(styleNames[i] + 'ClassNames');
+        console.log(i);
+        console.log(styleClasses);
+        let defaultClasses = this.get('classNames');
+        this.set('classNames', defaultClasses.concat(styleClasses));
+      }
+    }
   },
   click() {
     if (!this.get('disabled')) {

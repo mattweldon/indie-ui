@@ -11,7 +11,7 @@ export default Component.extend({
   tagName: 'footer',
   classNames: [
     'w-100',,
-    'pa3',
+    'pv3',
     'bt',
     'center',
     'b--light-gray',
