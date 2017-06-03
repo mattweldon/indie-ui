@@ -10,3 +10,16 @@
     {{indie-tab text="Tab 2" icon="chat" route="forms"}}
   {{/indie-section-heading}}
 </div>
+
+{{indie-subsection-heading title="Section Heading (Breadcrumb)" description="Breadcrumbs provide a simple way to click back to a parent section or page"}}
+
+<h3 class="doc-heading">Code</h3>
+{{code-snippet name="section-heading-breadcrumbs.hbs"}}
+
+<h3 class="doc-heading">Example</h3>
+<div class="component-example">
+  {{#indie-section-heading title="Subsection" breadcrumbText="Parent" breadcrumbRoute="forms" }}
+    {{indie-tab text="Tab 1" icon="face" route="layouts"}}
+    {{indie-tab text="Tab 2" icon="chat" route="forms"}}
+  {{/indie-section-heading}}
+</div>
