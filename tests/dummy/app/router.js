@@ -23,6 +23,9 @@ Router.map(function() {
   this.route('lists');
   this.route('tables');
   this.route('typography');
+  this.route('messages', function() {
+    this.route('toaster');
+  });
 });
 
 export default Router;

@@ -1,0 +1,15 @@
+  // Import the Service
+  toaster: Ember.inject.service('indie-toaster'),
+  
+  // Trigger the Toaster by setting a message
+  actions: {
+    triggerDefault: function() {
+      this.get('toaster').setMessage('Example default message');
+    },
+    triggerError: function() {
+      this.get('toaster').setMessage('Example error message', 'error');
+    },
+    triggerWarning: function() {
+      this.get('toaster').setMessage('Example warning message', 'warning');
+    },
+  }
