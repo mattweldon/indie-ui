@@ -16,7 +16,7 @@ export default Component.extend({
   layout,
   classNames: [
     'w-100',
-    'bg-blue'
+    'bg-brand'
   ],
   tagName: 'header',
   title: 'App Name',

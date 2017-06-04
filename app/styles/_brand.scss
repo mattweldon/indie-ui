@@ -1,0 +1,15 @@
+.bg-brand {
+  @extend .bg-blue; 
+}
+
+.hover-brand {
+  @extend .hover-light-blue;
+}
+
+.text-brand {
+  @extend .blue;
+}
+
+.brand-body-font {
+  @extend .sans-serif;
+}

@@ -11,8 +11,8 @@ export default Component.extend({
   classNames: [
     'w-100', 
     'ma0', 
-    'bg-blue', 
-    'sans-serif',
+    'bg-brand', 
+    'brand-body-font',
     'fw3'
   ]
 });
