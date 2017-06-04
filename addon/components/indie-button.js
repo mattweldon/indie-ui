@@ -54,11 +54,8 @@ export default Component.extend({
     var styleName = this.get('style');
     if (styleName) {
       var styleNames = styleName.split(' ');
-      console.log(styleNames);
       for (var i = 0; i < styleNames.length; i++) {
         let styleClasses = this.get(styleNames[i] + 'ClassNames');
-        console.log(i);
-        console.log(styleClasses);
         let defaultClasses = this.get('classNames');
         this.set('classNames', defaultClasses.concat(styleClasses));
       }

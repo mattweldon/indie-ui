@@ -13,10 +13,7 @@ export default Ember.Component.extend({
   childFormControls: Ember.computed('childViews', function() {
 
     var findChildFormControls = function(thisComponent) {
-      console.log('findChildFormControls');
       let childViews = thisComponent.get('childViews');
-      console.log(thisComponent);
-      console.log(childViews);
       var childFormControls = childViews.filter((childView) => {
         return childView.constructor.toString().indexOf('indie-form-control') !== -1;
       });
@@ -28,7 +25,6 @@ export default Ember.Component.extend({
 
       return childFormControls;
     };
-    console.log('-->');
     return findChildFormControls(this);
   }),
   validate: function() {
