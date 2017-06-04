@@ -10,7 +10,8 @@ export default Component.extend({
   layout,
   tagName: 'footer',
   classNames: [
-    'w-100',,
+    'indie-form-footer',
+    'w-100',
     'pv3',
     'bt',
     'center',

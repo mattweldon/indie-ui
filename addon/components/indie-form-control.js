@@ -9,6 +9,7 @@ export default Component.extend({
   layout,
   tagName: 'div',
   classNames: [
+    'indie-form-control',
     'db',
     'mb4'
   ],
@@ -162,7 +163,7 @@ export default Component.extend({
   }),
   // Classes
   inputTypeModifier: computed('type', function() {
-    return 'indie-form__control--' + this.get('type');
+    return 'indie-form-control--' + this.get('type');
   }),
   floatingClass: computed('isFloating', function() {
     if (this.get('isFloating')) {
@@ -182,7 +183,7 @@ export default Component.extend({
   inlineClass: computed('isInline', 'type', function() {
     if (this.get('type') === 'radio') {
       if (this.get('isInline')) {
-        return 'indie-form__control--inline-radio';
+        return 'indie-form-control--inline-radio';
       }
     }
   }),
@@ -200,6 +201,7 @@ export default Component.extend({
   }),
   labelClasses: computed('type', 'showErrorMessage', function() {
     var classNames = [
+      'indie-form-control__label',
       'db',
       'f6',
       'mb2'

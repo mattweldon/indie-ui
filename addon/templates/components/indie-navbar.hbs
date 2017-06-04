@@ -1,20 +1,14 @@
-<div class="w-90 center">
-
-  <div class="pa3 ph4-ns">
-
-    <div class="db dt-ns mw9 center w-100">
-      <!-- BRAND -->
-      <div class="db dtc-ns v-mid tl w-30">
-        <span class="dib f5 f4-ns fw7 pa2 mt0 mb0 link white">
-          {{title}}
-        </span>
-      </div>
-      <!-- NAVIGATION -->
-      <nav class="db dtc-ns v-mid w-100 tl tr-ns mt2 mt0-ns mb0">
-        {{yield}}
-      </nav>
+<div class="indie-navbar__wrapper w-90 center pa3 ph4-ns">
+  <div class="indie-navbar__inner-wrapper db dt-ns mw9 w-100">
+    <!-- BRAND -->
+    <div class="indie-navbar__brand db dtc-ns v-mid tl w-30">
+      <span class="indie-navbar__brand-text dib f5 f4-ns fw7 pa2 mt0 mb0 link white">
+        {{title}}
+      </span>
     </div>
-
+    <!-- NAVIGATION -->
+    <nav class="indie-navbar__nav db dtc-ns v-mid w-100 tl tr-ns mt2 mt0-ns mb0">
+      {{yield}}
+    </nav>
   </div>
-
 </div>

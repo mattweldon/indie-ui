@@ -10,6 +10,7 @@ export default Component.extend({
   layout,
   tagName: 'main',
   classNames: [
+    'indie-content',
     'w-90',
     'w-70-l',
     'pa3',

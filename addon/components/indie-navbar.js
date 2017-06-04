@@ -15,6 +15,7 @@ export default Component.extend({
   // Attributes
   layout,
   classNames: [
+    'indie-navbar',
     'w-100',
     'bg-brand'
   ],

@@ -11,14 +11,20 @@ export default Component.extend({
   // Attributes
   layout,
   classNames: [
-    'w-100', 'ma0', 'white', 'fw3', 'fixed', 'bottom-0'
+    'indie-snackbar',
+    'w-100', 
+    'ma0', 
+    'white', 
+    'fw3', 
+    'fixed', 
+    'bottom-0'
   ],
   // Computed
   isVisible: Ember.computed('toaster.message', function() {
     return this.get('toaster.message') !== null;
   }),
   setClasses: Ember.observer('toaster.type', function() {
-    let baseClasses = 'f6 fw4 w-90 w-70-l db pa3 ph4 center animated slideInUp';
+    let baseClasses = 'indie-snackbar__toast f6 fw4 w-90 w-70-l db pa3 ph4 center animated slideInUp';
     switch(this.get('toaster.type')) {
       case 'primary':
         this.set('classes', 'bg-dark-blue white ' + baseClasses);

@@ -8,5 +8,8 @@ const {
 export default Component.extend({
   // Attributes
   layout,
-  tagName: 'thead'
+  tagName: 'thead',
+  classNames: [
+    'indie-table-header'
+  ]
 });

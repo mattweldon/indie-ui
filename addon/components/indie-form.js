@@ -7,6 +7,9 @@ export default Ember.Component.extend({
   // Attributes
   layout,
   tagName: 'form',
+  classNames: [
+    'indie-form'
+  ],
   model: null,
   errorMessage: 'Please correct the errors in the form',
   // Computed

@@ -10,6 +10,7 @@ export default Component.extend({
   layout,
   tagName: 'tfoot',
   classNames: [
+    'indie-table-footer',
     'bg-silver'
   ]
 

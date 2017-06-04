@@ -59,15 +59,15 @@
 {{/if}}
 
 {{#if showErrorMessage}}
-  <div class="f7 fw3 mt2 red">{{v-get model name 'message'}}</div>
+  <div class="indie-form-control__error f7 fw3 mt2 red">{{v-get model name 'message'}}</div>
 {{/if}}
 
 {{#if showWarningMessage}}
-  <div class="smd-form__warning">{{v-get model name 'warningMessage'}}</div>
+  <div class="indie-form-control__warning">{{v-get model name 'warningMessage'}}</div>
 {{/if}}
 
 {{#if showTip}}
-  <div class="f7 fw3 mt2 moon-gray">{{tip}}</div>
+  <div class="indie-form-control__tip f7 fw3 mt2 moon-gray">{{tip}}</div>
 {{/if}}
 
 {{yield}}

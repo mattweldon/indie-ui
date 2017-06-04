@@ -1,9 +1,11 @@
 {{#if isActive}}
-  {{#link-to route class="f6 fw4 text-brand link mr2 mr0-ns mr0-m mr0-l ml0 ml2-ns ml3-m ml4-l dib pa2 db tc"}}
-    <i class="material-icons db tc mb1" style="display: block">{{icon}}</i> <div class="db tc">{{text}}</div>
+  {{#link-to route class="indie-tab f6 fw4 text-brand link mr2 mr0-ns mr0-m mr0-l ml0 ml2-ns ml3-m ml4-l dib pa2 db tc"}}
+    <i class="indie-tab__icon material-icons db tc mb1" style="display: block">{{icon}}</i> 
+    <div class="indie-tab__text db tc">{{text}}</div>
   {{/link-to}}
 {{else}}
-  {{#link-to route class="f6 fw4 moon-gray hover-brand bg-animate link mr2 mr0-ns mr0-m mr0-l ml0 ml2-ns ml3-m ml4-l dib pa2 db tc"}}
-    <i class="material-icons db tc mb1" style="display: block">{{icon}}</i> <div class="db tc">{{text}}</div>
+  {{#link-to route class="indie-tab f6 fw4 moon-gray hover-brand bg-animate link mr2 mr0-ns mr0-m mr0-l ml0 ml2-ns ml3-m ml4-l dib pa2 db tc"}}
+    <i class="indie-tab__icon material-icons db tc mb1" style="display: block">{{icon}}</i> 
+    <div class="indie-tab__text db tc">{{text}}</div>
   {{/link-to}}
 {{/if}}

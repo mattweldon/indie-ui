@@ -8,5 +8,8 @@ const {
 export default Component.extend({
   // Attributes
   layout,
-  tagName: 'tr'
+  tagName: 'tr',
+  classNames: [
+    'indie-table-row'
+  ]
 });

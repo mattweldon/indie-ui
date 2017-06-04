@@ -9,6 +9,7 @@ export default Component.extend({
   // Attributes
   layout,
   classNames: [
+    'indie-springboard',
     'w-100', 
     'ma0', 
     'bg-brand', 

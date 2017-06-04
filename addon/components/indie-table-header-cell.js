@@ -10,6 +10,7 @@ export default Component.extend({
   layout,
   tagName: 'th',
   classNames: [
+    'indie-table-header-cell',
     'fw6',
     'bb',
     'b--black-10',

@@ -11,7 +11,11 @@ const {
 export default Component.extend({
   // Attributes
   layout,
-  classNames: ['list', 'pl0'],
+  classNames: [
+    'indie-list',
+    'list', 
+    'pl0'
+  ],
   classNameBindings: [
     'scrollable:indie-list--scrollable',
     'sticky:indie-list--sticky',

@@ -10,6 +10,7 @@ export default Component.extend({
   layout,
   tagName: 'div',
   classNames: [
+    'indie-section-heading',
     'db',
     'dt-ns',
     'mw9',

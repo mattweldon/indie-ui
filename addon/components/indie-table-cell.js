@@ -10,6 +10,7 @@ export default Component.extend({
   layout,
   tagName: 'td',
   classNames: [
+   'indie-table-cell',
    'pv3', 
    'ph2',
    'bb',

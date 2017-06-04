@@ -10,6 +10,7 @@ export default Component.extend({
   layout,
   tagName: 'table',
   classNames: [
+    'indie-table',
     'f6', 
     'w-100', 
     'center'

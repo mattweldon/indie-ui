@@ -10,6 +10,7 @@ export default Component.extend({
   layout,
   tagName: 'button',
   classNames: [
+    'indie-button',
     'ba',
     'bw0',
     'ml3',
@@ -21,24 +22,28 @@ export default Component.extend({
     'bg-animate',
   ],
   primaryClassNames: [
+    'indie-button--primary',
     'hover-bg-dark-blue',
     'bg-blue',
     'b--dark-blue',
     'white',
   ],
   positiveClassNames: [
+    'indie-button--positive',
     'hover-bg-dark-green',
     'bg-green',
     'b--dark-green',
     'white',
   ],
   negativeClassNames: [
+    'indie-button--negative',
     'hover-bg-dark-red',
     'bg-red',
     'b--dark-red',
     'white',
   ],
   linkClassNames: [
+    'indie-button--link',
     'blue',
     'link',
     'underline',

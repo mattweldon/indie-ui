@@ -1,11 +1,11 @@
-<div class="db dtc-ns v-mid tl w-100 w-30-ns">
-  <h1 class="fw4">
+<div class="indie-section-heading__header db dtc-ns v-mid tl w-100 w-30-ns">
+  <h1 class="indie-section-heading__title fw4">
     {{#if breadcrumbText}}
-      {{#link-to breadcrumbRoute class="link moon-gray"}}{{breadcrumbText}} /{{/link-to}}
+      {{#link-to breadcrumbRoute class="indie-section-heading__breadcrumb link moon-gray"}}{{breadcrumbText}} /{{/link-to}}
     {{/if}}
     {{title}}
   </h1>
 </div>
-<nav class="db dtc-ns v-mid w-100 tl tr-ns">
+<nav class="indie-section-heading__tabs db dtc-ns v-mid w-100 tl tr-ns">
   {{yield}}
 </nav>
